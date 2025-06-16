@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Air Fest - Script & Discord</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="rain" id="rain"></div>
+  <div class="particles" id="particles"></div>
+
+  <div class="container">
+    <div class="logo">Air Fest</div>
+
+    <div class="tabs">
+      <div class="tab-btn active" onclick="showTab('script')"><i class="fa-solid fa-code"></i> Script</div>
+      <div class="tab-btn" onclick="showTab('discord')"><i class="fa-brands fa-discord"></i> Discord</div>
+      <div class="tab-btn" onclick="showTab('updates')"><i class="fa-solid fa-clock-rotate-left"></i> Updates</div>
+    </div>
+
+    <div id="script" class="tab-content active">
+      <div class="content-box">
+        <h2><i class="fa-solid fa-code"></i> Script</h2>
+        <pre id="scriptBox">loadstring(game:HttpGet("https://your-link.com/script.lua"))()</pre>
+        <button class="copy-btn" onclick="copyScript()">
+          <i class="fa-solid fa-copy"></i> Copy Script
+        </button>
+      </div>
+    </div>
+
+    <div id="discord" class="tab-content">
+      <div class="content-box">
+        <h2><i class="fa-brands fa-discord"></i> Discord</h2>
+        <pre id="discordBox">https://discord.gg/ZqPFUWTwgn</pre>
+        <button class="copy-btn" onclick="copyDiscord()">
+          <i class="fa-solid fa-copy"></i> Copy Link
+        </button>
+      </div>
+    </div>
+
+    <div id="updates" class="tab-content">
+      <div class="content-box">
+        <h2><i class="fa-solid fa-clock-rotate-left"></i> Latest Updates</h2>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Fixed ESP not showing names</li>
+          <li><i class="fa-solid fa-check"></i> Added Anti-AFK toggle</li>
+          <li><i class="fa-solid fa-check"></i> New UI improvements</li>
+          <li><i class="fa-solid fa-check"></i> Updated car speed to 140</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
